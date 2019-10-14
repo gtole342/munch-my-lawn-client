@@ -40,7 +40,7 @@ class Goat extends Component {
   getCurrentGoat = () => {
   axios.get(SERVER + `/goat/${this.state.goatId}`)
     .then(response => {
-      console.log(response.data.user)
+      // console.log(response.data.user)
       this.setState({
         id: response.data.user._id,
         name: response.data.user.firstname,
@@ -58,20 +58,10 @@ class Goat extends Component {
     })
   }
 
-  // renderRedirect = () => {
-
-  //   if (this.state.redirect) {
-  //     return <Redirect to={{
-  //       pathname: '/messages',
-  //       state: { recipient: this.state.goatId, user: this.props.user }
-  //     }} />
-  //   }
-  // }
-
   getAppointments = () => {
     axios.get(GET_GOATS_APPOINTMENTS)
     .then(response => {
-      console.log(response.data)
+      //console.log(response.data)
       this.setState({appointments: response.data})
     })
   }
@@ -80,16 +70,13 @@ class Goat extends Component {
     e.preventDefault()
     axios.post(CREATE_APPOINTMENT, this.state)
     .then(response => {
-      console.log("Appointment created with", this.state)
     })
     .catch(err => {
       console.log('Error in the create Appointment route', err)
     })
   }
 
-  
   render() {
-    console.log(this.state)
 
     return(
       <div className="goat">
