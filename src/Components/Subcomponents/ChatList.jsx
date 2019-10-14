@@ -10,7 +10,7 @@ class ChatList extends Component {
     }
 
     componentDidMount(){
-      
+      //console.log('Gimme stuff please from', this.props.user._id)
         axios.get(SERVER + `/message/${this.props.user._id}`)
         .then(response => {
             console.log(response.data)

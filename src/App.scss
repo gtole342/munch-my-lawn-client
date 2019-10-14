@@ -77,8 +77,8 @@ nav {
   overflow: scroll;
   border: 2px solid rgb(45, 45, 45);
   min-height: 55vh;
-  // resize: both;
-  // overflow: auto;
+  max-height: 55vh;
+  overflow: auto;
 }
 
 .chat-list {

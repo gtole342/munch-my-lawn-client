@@ -6,6 +6,7 @@ import Nav from './components/Subcomponents/Nav';
 import Content from './components/Content';
 import axios from 'axios'
 import Footer from './components/Subcomponents/Footer'
+import { CURRENT_USER } from './constants'
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class App extends Component {
     let token = localStorage.getItem('mernToken')
     //If theres a token, try to use it ot get the user info
     if (token) {
-      axios.get(`https://peaceful-escarpment-58515.herokuapp.com/auth/current/user`, {
+      axios.get(CURRENT_USER, {
         headers: {'Authorization': `Bearer ${token}` }
       })
       .then(response => {
