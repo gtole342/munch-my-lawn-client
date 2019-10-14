@@ -25,6 +25,7 @@ class Browse extends Component {
 
   
   render() {
+    console.log(this.props.user)
     const goatDisplays = this.state.goats.map((goat) => {
     return(
       

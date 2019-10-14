@@ -1,45 +1,49 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import Calendar from '../Subcomponents/Calendar';
 import Reviews from '../Subcomponents/Reviews';
 import axios from 'axios'
-import {Redirect, Link} from 'react-router-dom'
-import {CREATE_APPOINTMENT, GET_GOATS_APPOINTMENTS, SERVER, LOCALHOST} from '../../constants'
+import {Link} from 'react-router-dom'
+import {CREATE_APPOINTMENT, GET_GOATS_APPOINTMENTS, SERVER } from '../../constants'
 class Goat extends Component {
   state = {
     date: '',
-<<<<<<< Updated upstream
-    goatId: "",
+    goatId: '',
     goatName: '',
     clientId: '',
-=======
-    goatId: this.props.location.state.goat._id || '',
-    goatName: this.props.location.state.goat.firstname || '',
-    clientId: this.props.location.state.user._id || '',
->>>>>>> Stashed changes
     location: '',
     appointments: [], 
-    user: this.props.user,
+    user: this.props.location.state.user,
     redirect: false
   }
   
   componentDidMount() {
     console.log(this.props)
-    this.getCurrentGoat();
+    let goatId
+    let goatName
+    if (!this.props.location.state) {
+      const goat = this.getCurrentGoat()
+      goatId = goat.id
+      goatName = goat.name
+
+    } else {
+      goatId = this.props.location.state.goat._id
+      goatName = this.props.location.state.goat._id
+    }
+    this.setState({
+      goatId,
+      goatName,
+      clientId: this.props.location.state.user
+    })
     // this.getAppointments()
-    
   }
 
   getCurrentGoat = () => {
-<<<<<<< Updated upstream
-  axios.get(SERVER + `/goat/${this.props.goatId}`)
-=======
   axios.get(SERVER + `/goat/${this.state.goatId}`)
->>>>>>> Stashed changes
     .then(response => {
       console.log(response.data.user)
       this.setState({
-        goatId: response.data.user._id
+        id: response.data.user._id,
+        name: response.data.user.firstname,
       })
     })
     .catch(err => {
@@ -89,19 +93,26 @@ class Goat extends Component {
 
     return(
       <div className="goat">
-        <div className='profile-container-left'>
-          {/* <h2>{this.props.user.firstname}</h2>
-          <h2>{this.props.user.lastname}</h2>
-          <h2>{this.props.user.email}</h2> */}
+        <img src={this.props.location.state.goat.profilePic} 
+            alt={this.props.location.state.goat.firstname}
+            className="goat-profile-img"
+        />
+        <div>
+          <Calendar 
+            appointments={this.props.location.state.goat.appointments}
+            clientId={this.props.location.state.user}
+            goatId={this.props.location.state.goat._id}
+          />
+          <Link to={{
+            pathname: '/messages',
+            state: {recipient: this.state.goatId,
+                    user: this.props.location.state.user
+                  }
+          }}>
+            Chat with me Here
+          </Link>
         </div>
-        <Calendar appointments={[moment(), moment().add(10, 'days')]} />
-        <Reviews />
-        <Link to={{
-          pathname: '/messages',
-          state: {recipient: this.state.goatId,
-                  user: this.props.location.state.user
-                 }
-          }}>Chat with me Here</Link>
+        <Reviews user={this.state.user} goat={this.props.location.state.goat}/>
       </div>
 
     );

@@ -17,9 +17,6 @@ class Appointments extends Component {
             <h1>Appointment scheduled at {moment().format(appointment.date)} with {appointment.goatName}</h1>
           </div>
         ))}
-        <Calendar
-          appointments={[moment(), moment().add(10, 'days')]}
-        />
       </div>
     }
     return(
