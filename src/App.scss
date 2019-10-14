@@ -187,6 +187,12 @@ nav {
   // justify-content: space-around;
 }
 
+.goat-profile-img {
+  width: 300px;
+  height: 300px;
+  clip-path: square();
+}
+
 .goat-card {
   text-decoration: none;
   display: grid;
@@ -264,6 +270,9 @@ nav {
 }
 .goat {
   height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 
 .footer {
