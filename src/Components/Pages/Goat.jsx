@@ -8,15 +8,9 @@ import {CREATE_APPOINTMENT, GET_GOATS_APPOINTMENTS, SERVER, LOCALHOST} from '../
 class Goat extends Component {
   state = {
     date: '',
-<<<<<<< Updated upstream
-    goatId: "",
-    goatName: '',
-    clientId: '',
-=======
     goatId: this.props.location.state.goat._id || '',
     goatName: this.props.location.state.goat.firstname || '',
     clientId: this.props.location.state.user._id || '',
->>>>>>> Stashed changes
     location: '',
     appointments: [], 
     user: this.props.user,
@@ -31,11 +25,7 @@ class Goat extends Component {
   }
 
   getCurrentGoat = () => {
-<<<<<<< Updated upstream
-  axios.get(SERVER + `/goat/${this.props.goatId}`)
-=======
   axios.get(SERVER + `/goat/${this.state.goatId}`)
->>>>>>> Stashed changes
     .then(response => {
       console.log(response.data.user)
       this.setState({
