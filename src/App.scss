@@ -34,6 +34,10 @@ nav {
   border-radius: 5px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 @media (min-width: 30rem){
   nav {
     grid-template-columns: 1fr auto auto auto auto ;
@@ -89,6 +93,12 @@ nav {
   border: 2px solid rgb(45, 45, 45);
 }
 
+.chat-list-name {
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
+  margin: 10px;
+}
+
 .chat-notify {
   position: relative;
   max-height: 40px;
@@ -97,7 +107,6 @@ nav {
 
 #chat-input {
   height: 5vh;
-  
 }
 
 .chat-submit-form {
@@ -146,7 +155,6 @@ nav {
 .bg-video {
   text-align: center;
   position: relative;
-  
   height: 95vh;
   width: 100%;
 }
