@@ -212,6 +212,9 @@ ul {
   grid-template-columns: 40% 1fr;
   border-style: solid;
   border-color: #939196;
+  background-color: white;
+  color: black;
+  text-align: center;
   border-width: 5px;
 }
 .view-goat {
@@ -226,7 +229,7 @@ ul {
 }
 
 .browse-display {
-  background-color: #acb0bd;
+  background-color: #f0f1f4;
   height: 100vh;
   width: 100%;
   display: grid;
