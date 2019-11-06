@@ -192,9 +192,7 @@ ul {
   height: 100vh;
   width: 100%;
   overflow: auto;
-  // display: grid;
-  // grid-template-columns: auto;
-  // justify-content: space-around;
+  margin: 40px 0px;
 }
 
 .goat-profile-img {
@@ -234,11 +232,15 @@ ul {
   width: 100%;
   display: grid;
   grid-template-columns: 25% auto;
+
 }
 
 .map-container {
+  margin: 40px 0px;
   width: 80%;
   height: 80%;
+  border: 3px solid black;
+  box-shadow: 5px 10px 5px black;
 }
 .signup-container {
   height: 75vh;
