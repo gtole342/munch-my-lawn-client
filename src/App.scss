@@ -44,6 +44,8 @@ ul {
     justify-items: start;
   }
 }
+
+
 .messages {
   min-height: 100vh;
   background-image: url('https://1igc0ojossa412h1e3ek8d1w-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/topographic.jpg');
@@ -161,7 +163,7 @@ ul {
 
 .header-container {
   background: rgba(109, 76, 61, .9);
-  top: 40%;
+  top: 50%;
   width: 40%;
   margin-left: 30%;
   padding: 1%;
@@ -177,7 +179,7 @@ ul {
   color: #488B49;
   // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
 }
 .goat-avatar {
@@ -211,6 +213,16 @@ ul {
   border-style: solid;
   border-color: #939196;
   border-width: 5px;
+}
+.view-goat {
+  display: flex;
+  margin: 30px;
+  padding: 40px;
+  justify-content: space-evenly;
+}
+
+.goat-image-container {
+  padding: 0px 20px;
 }
 
 .browse-display {
@@ -307,4 +319,20 @@ a:visited {
 
 a:active {
  text-decoration: none;  
+}
+
+@media only screen and (max-width: 650px){
+  .view-goat {
+    display: block;
+    border: 1px solid black;
+  }
+  .goat-image-container {
+    padding: 10px;
+  }
+  .header-container {
+    top: 20%;
+  }
+  .header-main {
+    font-size: 20px;
+  }
 }
