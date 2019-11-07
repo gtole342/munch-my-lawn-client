@@ -214,6 +214,13 @@ ul {
   color: black;
   text-align: center;
   border-width: 5px;
+  box-shadow: 5px 5px 5px black;
+  transition-duration: .3s;
+}
+
+.goat-card:hover {
+  opacity: 0.9;
+  width: 90%;
 }
 .view-goat {
   display: flex;
@@ -239,7 +246,7 @@ ul {
   margin: 40px 0px 0px 40px;
   width: 80%;
   height: 72%;
-  border: 3px solid black;
+  border: 5px solid black;
   box-shadow: 5px 10px 5px black;
 }
 .signup-container {
