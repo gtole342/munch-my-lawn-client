@@ -169,7 +169,7 @@ ul {
   top: 0;
   height: auto;
   width: 100%;
-  filter: brightness(1.1)
+  filter: brightness(1.07)
 }
 
 .bg-video {
@@ -224,6 +224,8 @@ ul {
   width: 300px;
   height: 300px;
   clip-path: square();
+  border: 10px solid black;
+  padding: 10px;
 }
 
 .goat-card {
@@ -247,6 +249,17 @@ ul {
   opacity: 0.9;
   width: 90%;
 }
+
+.goat {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-image: url('./images/grass.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .view-goat {
   display: flex;
   margin: 30px;
@@ -334,12 +347,7 @@ ul {
   background-color: #fff;
   color: #777;
 }
-.goat {
-  height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-}
+
 
 .footer {
   background-color: #6d4c3d;
