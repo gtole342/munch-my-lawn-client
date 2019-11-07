@@ -192,7 +192,7 @@ ul {
   height: 100vh;
   width: 100%;
   overflow: auto;
-  margin: 40px 0px;
+  margin: 40px 0px 0px 40px;
 }
 
 .goat-profile-img {
@@ -228,7 +228,7 @@ ul {
 
 .browse-display {
   background-color: #f0f1f4;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: grid;
   grid-template-columns: 25% auto;
@@ -236,9 +236,9 @@ ul {
 }
 
 .map-container {
-  margin: 40px 0px;
+  margin: 40px 0px 0px 40px;
   width: 80%;
-  height: 80%;
+  height: 72%;
   border: 3px solid black;
   box-shadow: 5px 10px 5px black;
 }
