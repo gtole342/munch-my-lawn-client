@@ -34,6 +34,10 @@ nav {
   border-radius: 5px;
 }
 
+.nav-button:hover {
+  color: rgb(0, 255, 34);
+}
+
 ul {
   list-style-type: none;
 }
@@ -168,12 +172,16 @@ ul {
 
 .header-container {
   background: rgba(109, 76, 61, .9);
-  top: 50%;
-  width: 40%;
-  margin-left: 30%;
+  top: 10%;
+  width: 30%;
+  margin-left: 1%;
   padding: 1%;
   position: absolute;
   border-radius: 10px;
+}
+
+.header-container:hover {
+  background-color: rgba(109, 76, 61, 1);
 }
 
 .header-content {
@@ -187,6 +195,7 @@ ul {
   font-size: 30px;
   font-weight: 600;
 }
+
 .goat-avatar {
   width: 100px;
   height: 100px;
