@@ -220,11 +220,23 @@ ul {
   margin: 40px 0px 0px 40px;
 }
 
+.goat {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-image: url('./images/grass3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(237, 237, 237);
+}
+
 .goat-profile-img {
   width: 300px;
   height: 300px;
   clip-path: square();
-  border: 10px solid black;
+  border: 5px solid rgb(232, 232, 232);
+  border-radius: 5px;
   padding: 10px;
 }
 
@@ -248,16 +260,6 @@ ul {
 .goat-card:hover {
   opacity: 0.9;
   width: 90%;
-}
-
-.goat {
-  height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  background-image: url('./images/grass.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .view-goat {
@@ -373,6 +375,22 @@ a:visited {
 
 a:active {
  text-decoration: none;  
+}
+
+#want-to-chat {
+  margin: 190px 0px;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  background-color: rgb(232, 232, 232);
+  padding: 0px 10px;
+  text-shadow: 1px 1px rgb(85, 54, 27);
+  border-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+#want-to-chat:hover {
+  color: white;
+  border-radius: 0px;
 }
 
 @media only screen and (max-width: 650px){

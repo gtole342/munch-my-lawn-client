@@ -99,7 +99,9 @@ class Goat extends Component {
                       user: this.props.location.state.user
                     }
             }}>
-              Chat with me Here
+              <div id="want-to-chat">
+              <h2>Want To Chat?</h2>
+              </div>
             </Link>
           </div>
         </div>
