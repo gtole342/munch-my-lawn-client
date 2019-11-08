@@ -37,7 +37,7 @@ class Signup extends Component {
       return(<Redirect to='/' />)
     }
     return(
-      <div>
+      <div className="signup-container">
         <form className="signup-form" onSubmit={this.submitSignup}>
           <h3>Signup</h3>
           <input type='text' name='firstname' placeholder='firstname'  onChange={(e) => this.setState({ firstname: e.target.value, message: '' })}/>

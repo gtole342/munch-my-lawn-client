@@ -80,24 +80,30 @@ class Goat extends Component {
 
     return(
       <div className="goat">
-        <img src={this.props.location.state.goat.profilePic} 
-            alt={this.props.location.state.goat.firstname}
-            className="goat-profile-img"
-        />
-        <div>
-          <Calendar 
-            appointments={this.props.location.state.goat.appointments}
-            clientId={this.props.location.state.user}
-            goatId={this.props.location.state.goat._id}
-          />
-          <Link to={{
-            pathname: '/messages',
-            state: {recipient: this.state.goatId,
-                    user: this.props.location.state.user
-                  }
-          }}>
-            Chat with me Here
-          </Link>
+        <div className="view-goat">
+          <div className="goat-image-container">
+            <img src={this.props.location.state.goat.profilePic} 
+                alt={this.props.location.state.goat.firstname}
+                className="goat-profile-img"
+            />
+          </div>
+          <div>
+            <Calendar 
+              appointments={this.props.location.state.goat.appointments}
+              clientId={this.props.location.state.user}
+              goatId={this.props.location.state.goat._id}
+            />
+            <Link to={{
+              pathname: '/messages',
+              state: {recipient: this.state.goatId,
+                      user: this.props.location.state.user
+                    }
+            }}>
+              <div id="want-to-chat">
+              <h2>Want To Chat?</h2>
+              </div>
+            </Link>
+          </div>
         </div>
         <Reviews user={this.state.user} goat={this.props.location.state.goat}/>
       </div>

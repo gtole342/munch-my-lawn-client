@@ -35,7 +35,7 @@ class Login extends Component {
       return(<Redirect to='/browse' />)
     }
     return(
-      <div>
+      <div className="login-page">
         <form className="login-form" onSubmit={this.submitLogin}>
           <h3>Login</h3>
           <input type='text' name='email' placeholder='email' onChange={(e) => this.setState({ email: e.target.value, message: '' })}/>

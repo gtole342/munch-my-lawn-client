@@ -110,7 +110,7 @@ class Reviews extends Component {
 
     return(
       <div>
-        <h2>Reveiws of {this.props.goat.firstname}</h2>
+        <h2>Reviews of {this.props.goat.firstname}</h2>
         {reviews}
         {newReview}
       </div>

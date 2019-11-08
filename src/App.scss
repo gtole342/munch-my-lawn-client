@@ -32,6 +32,16 @@ nav {
   border-width: 1px;
   padding: 5px;
   border-radius: 5px;
+  transition-duration: .3s;
+  text-shadow: 1px 1px black;
+}
+
+.nav-button:hover {
+  color: rgb(0, 255, 34);
+}
+
+ul {
+  list-style-type: none;
 }
 
 @media (min-width: 30rem){
@@ -40,6 +50,13 @@ nav {
     justify-items: start;
   }
 }
+
+.profile-container {
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .messages {
   min-height: 100vh;
   background-image: url('https://1igc0ojossa412h1e3ek8d1w-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/topographic.jpg');
@@ -66,11 +83,13 @@ nav {
 }
 
 .message-block {
-  background-color: rgba(228, 228, 228, 0.954);
+  background: linear-gradient(rgba(228, 228, 228, 0.954), rgb(0, 208, 255));
   padding: 15px;
+  margin: 5px;
   border: 1px solid white;
   border-radius: 1px;
-  max-width: 20vw;
+  max-width: 35vw;
+  
 }
 .message-display {
   background-color: rgba(255, 255, 255, 0.95);
@@ -78,6 +97,7 @@ nav {
   border: 2px solid rgb(45, 45, 45);
   min-height: 55vh;
   max-height: 55vh;
+  min-width: 35vw;
   overflow: auto;
 }
 
@@ -87,6 +107,15 @@ nav {
   min-width: 40vw;
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid rgb(45, 45, 45);
+  color: black;
+  overflow: scroll;
+}
+
+.chat-list-name {
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
+  margin: 10px;
+  border: 1px solid black;
 }
 
 .chat-notify {
@@ -97,7 +126,6 @@ nav {
 
 #chat-input {
   height: 5vh;
-  
 }
 
 .chat-submit-form {
@@ -141,24 +169,29 @@ nav {
   top: 0;
   height: auto;
   width: 100%;
+  filter: brightness(1.07)
 }
 
 .bg-video {
   text-align: center;
   position: relative;
-  
   height: 95vh;
   width: 100%;
 }
 
 .header-container {
   background: rgba(109, 76, 61, .9);
-  top: 40%;
-  width: 40%;
-  margin-left: 30%;
+  top: 10%;
+  width: 30%;
+  margin-left: 1%;
   padding: 1%;
   position: absolute;
   border-radius: 10px;
+  transition-duration: .2s;
+}
+
+.header-container:hover {
+  background-color: rgba(109, 76, 61, 1);
 }
 
 .header-content {
@@ -169,9 +202,11 @@ nav {
   color: #488B49;
   // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
+  text-shadow: 1px 1px black;
 }
+
 .goat-avatar {
   width: 100px;
   height: 100px;
@@ -182,15 +217,27 @@ nav {
   height: 100vh;
   width: 100%;
   overflow: auto;
-  // display: grid;
-  // grid-template-columns: auto;
-  // justify-content: space-around;
+  margin: 40px 0px 0px 40px;
+}
+
+.goat {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-image: url('./images/grass3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(237, 237, 237);
 }
 
 .goat-profile-img {
   width: 300px;
   height: 300px;
   clip-path: square();
+  border: 5px solid rgb(232, 232, 232);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .goat-card {
@@ -202,26 +249,55 @@ nav {
   grid-template-columns: 40% 1fr;
   border-style: solid;
   border-color: #939196;
+  background-color: white;
+  color: black;
+  text-align: center;
   border-width: 5px;
+  box-shadow: 5px 5px 5px black;
+  transition-duration: .3s;
+}
+
+.goat-card:hover {
+  opacity: 0.9;
+  width: 90%;
+}
+
+.view-goat {
+  display: flex;
+  margin: 30px;
+  padding: 40px;
+  justify-content: space-evenly;
+}
+
+.goat-image-container {
+  padding: 0px 20px;
 }
 
 .browse-display {
-  background-color: #acb0bd;
-  height: 100vh;
+  background-color: #f0f1f4;
+  height: 110vh;
   width: 100%;
   display: grid;
   grid-template-columns: 25% auto;
+
 }
 
 .map-container {
+  margin: 40px 0px 0px 60px;
   width: 80%;
-  height: 80%;
+  height: 72%;
+  border: 5px solid black;
+  box-shadow: 5px 10px 5px black;
 }
-
+.signup-container {
+  height: 75vh;
+  padding: 50px;
+}
 .signup-form {
   display: grid;
-  grid-template-columns: 25%;
+  grid-template-columns: 35%;
   justify-content: center;
+  height: 35vh;
 }
 
 .signup-radio {
@@ -229,11 +305,16 @@ nav {
   grid-template-columns: auto auto auto auto;
   justify-content: center;
 }
-
+.login-page {
+  padding: 50px;
+  height: 75vh;
+  
+}
 .login-form {
   display: grid;
-  grid-template-columns: 25%;
+  grid-template-columns: 35%;
   justify-content: center;
+  height: 25vh;
 }
 
 .browse-button {
@@ -268,12 +349,7 @@ nav {
   background-color: #fff;
   color: #777;
 }
-.goat {
-  height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-}
+
 
 .footer {
   background-color: #6d4c3d;
@@ -299,4 +375,36 @@ a:visited {
 
 a:active {
  text-decoration: none;  
+}
+
+#want-to-chat {
+  margin: 190px 0px;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  background-color: rgb(232, 232, 232);
+  padding: 0px 10px;
+  text-shadow: 1px 1px rgb(85, 54, 27);
+  border-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+#want-to-chat:hover {
+  color: white;
+  border-radius: 0px;
+}
+
+@media only screen and (max-width: 650px){
+  .view-goat {
+    display: block;
+    border: 1px solid black;
+  }
+  .goat-image-container {
+    padding: 10px;
+  }
+  .header-container {
+    top: 20%;
+  }
+  .header-main {
+    font-size: 20px;
+  }
 }
