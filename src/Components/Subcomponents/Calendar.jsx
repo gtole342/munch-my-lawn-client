@@ -24,7 +24,9 @@ class Calendar extends Component {
     .then((response)=>{
       console.log(response)
     })
-    .catch()
+    .catch(err => {
+      console.log('Uh oh ya goof', err)
+    })
     }
 
   onDateChange = ( date ) => this.setState({ date })
@@ -36,13 +38,12 @@ class Calendar extends Component {
       return this.props.appointments.filter(d => moment(d).isSame(day, 'day')).length > 0
     }
     else {
-      return []
+      return false
     }
   }
 
   render() {
-    console.log(this.props)
-    console.log(this.state)
+    console.log('These are the appointments', this.props.appointments)
     return (
       <div>
         <SingleDatePicker

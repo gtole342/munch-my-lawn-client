@@ -16,6 +16,7 @@ class Chat extends Component {
     }
     
     componentDidMount() {
+        //console.log(this.props.recipient)
         let recipient;
         let user;
         if (this.props.user.isGoat) {
@@ -31,6 +32,9 @@ class Chat extends Component {
         this.socket.on('add message', (mssg) => {
             let messageArray = this.state.messages;
             messageArray.push(mssg)
+            setTimeout(function(){
+                messageArray.push('baaaaa')
+            }, 1000)
             this.setState({
                 messages: messageArray,
                 notify: ''
@@ -51,7 +55,6 @@ class Chat extends Component {
     callMessageDb = (currentUser, recipient) => {
         axios.get(SERVER + `/message/${currentUser}/${recipient}`)
         .then(response => {
-            console.log(response);
             let messageArray = this.state.messages;
             for (let i = 0; i < response.data.length; i++) {
                 messageArray.push(response.data[i].message)
@@ -65,9 +68,10 @@ class Chat extends Component {
         })
     }
 
+
     formOnSubmit = (e) => {
         e.preventDefault();
-        console.log(this.props.recipient, this.props.user._id)
+        //console.log(this.props.recipient, this.props.user._id)
        if(this.state.input !== ""){
            this.socket.emit('add message', this.state.input, this.props.user._id, this.props.recipient)
        }

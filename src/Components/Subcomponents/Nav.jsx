@@ -50,13 +50,15 @@ class Nav extends Component {
       )
     }
     return(
-      <div>
+      <div className="navigation">
         <nav>
-          <span className="logo">
-            <Link to="/">
-              <img src="/images/logo-white.png" alt="MunchMyLawn logo" width="100%"/>
-            </Link>
-          </span>
+            <span className="logo">
+              <Link to="/">
+                <img src="/images/logo-white.png" alt="MunchMyLawn logo" width="100%"/>
+              </Link>
+            </span>
+          <div>
+          </div>
           <span>
             <Link to={{
               pathname: "/browse",

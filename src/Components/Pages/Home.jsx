@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 
 class Home extends Component {
+  
+  state = {
+    redirect: false
+  }
+
+  handleSubmit = () => {
+    this.setState({
+      redirect: true
+    })
+  }
   render(){
+
+    if (this.state.redirect === true) {
+      return (
+        <Redirect to='/browse'/>
+      )
+    }
     return(
       <div>
         <div className="bg-video">
@@ -13,7 +30,7 @@ class Home extends Component {
           <div className="header-container">
             <div className="header-content">
               <h1 className="header-main">Hire a goat for your horticultural needs</h1>
-              <button className="btn btn-white" type="button">See Local Goats</button>
+              <button className="btn btn-white" type="submit" onClick={this.handleSubmit}>See Local Goats</button>
             </div>
           </div>
         </div>

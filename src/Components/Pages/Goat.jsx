@@ -40,7 +40,7 @@ class Goat extends Component {
   getCurrentGoat = () => {
   axios.get(SERVER + `/goat/${this.state.goatId}`)
     .then(response => {
-      console.log(response.data.user)
+      // console.log(response.data.user)
       this.setState({
         id: response.data.user._id,
         name: response.data.user.firstname,
@@ -58,20 +58,10 @@ class Goat extends Component {
     })
   }
 
-  // renderRedirect = () => {
-
-  //   if (this.state.redirect) {
-  //     return <Redirect to={{
-  //       pathname: '/messages',
-  //       state: { recipient: this.state.goatId, user: this.props.user }
-  //     }} />
-  //   }
-  // }
-
   getAppointments = () => {
     axios.get(GET_GOATS_APPOINTMENTS)
     .then(response => {
-      console.log(response.data)
+      //console.log(response.data)
       this.setState({appointments: response.data})
     })
   }
@@ -80,37 +70,40 @@ class Goat extends Component {
     e.preventDefault()
     axios.post(CREATE_APPOINTMENT, this.state)
     .then(response => {
-      console.log("Appointment created with", this.state)
     })
     .catch(err => {
       console.log('Error in the create Appointment route', err)
     })
   }
 
-  
   render() {
-    console.log(this.state)
 
     return(
       <div className="goat">
-        <img src={this.props.location.state.goat.profilePic} 
-            alt={this.props.location.state.goat.firstname}
-            className="goat-profile-img"
-        />
-        <div>
-          <Calendar 
-            appointments={this.props.location.state.goat.appointments}
-            clientId={this.props.location.state.user}
-            goatId={this.props.location.state.goat._id}
-          />
-          <Link to={{
-            pathname: '/messages',
-            state: {recipient: this.state.goatId,
-                    user: this.props.location.state.user
-                  }
-          }}>
-            Chat with me Here
-          </Link>
+        <div className="view-goat">
+          <div className="goat-image-container">
+            <img src={this.props.location.state.goat.profilePic} 
+                alt={this.props.location.state.goat.firstname}
+                className="goat-profile-img"
+            />
+          </div>
+          <div>
+            <Calendar 
+              appointments={this.props.location.state.goat.appointments}
+              clientId={this.props.location.state.user}
+              goatId={this.props.location.state.goat._id}
+            />
+            <Link to={{
+              pathname: '/messages',
+              state: {recipient: this.state.goatId,
+                      user: this.props.location.state.user
+                    }
+            }}>
+              <div id="want-to-chat">
+              <h2>Want To Chat?</h2>
+              </div>
+            </Link>
+          </div>
         </div>
         <Reviews user={this.state.user} goat={this.props.location.state.goat}/>
       </div>

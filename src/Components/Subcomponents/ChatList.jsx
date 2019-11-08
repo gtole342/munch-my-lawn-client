@@ -10,12 +10,12 @@ class ChatList extends Component {
     }
 
     componentDidMount(){
-      
+      //console.log('Gimme stuff please from', this.props.user._id)
         axios.get(SERVER + `/message/${this.props.user._id}`)
         .then(response => {
-            console.log(response.data)
+            //console.log(response.data.response)
             this.setState({
-                chats: response.data
+                chats: response.data.response
             })
         })
         .catch(err => {
@@ -23,9 +23,38 @@ class ChatList extends Component {
         })
     }
     render() {
+        const ids = this.state.chats.map((chat) => {
+            return (
+                chat.firstname
+            )
+        })
+
+        const uniqueIds = [...new Set(ids)]
+        
+        const nameList = uniqueIds.map((id, idx) => {
+            if (uniqueIds) {
+                return (
+                    <li key={idx} className="chat-list-name">
+                        {id}
+                        <br/>
+                        <input type="submit"/>
+                    </li>
+                )
+            } else {
+                return (
+                    <h3>
+                        Chat History Currently Empty
+                    </h3>
+                )
+            }
+        })
+
         return (
             <div className="chat-list">
-                This is my Chat List
+               <h2>Chat History</h2> 
+                <ul>
+                   {nameList}
+                </ul>
             </div>
         )
     }
