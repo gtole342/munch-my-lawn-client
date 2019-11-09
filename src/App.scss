@@ -89,8 +89,8 @@ ul {
   border: 1px solid white;
   border-radius: 1px;
   max-width: 35vw;
-  
 }
+
 .message-display {
   background-color: rgba(255, 255, 255, 0.95);
   overflow: scroll;
@@ -169,7 +169,7 @@ ul {
   top: 0;
   height: auto;
   width: 100%;
-  filter: brightness(1.07)
+  filter: brightness(1.05)
 }
 
 .bg-video {
@@ -279,7 +279,6 @@ ul {
   width: 100%;
   display: grid;
   grid-template-columns: 25% auto;
-
 }
 
 .map-container {
@@ -289,10 +288,12 @@ ul {
   border: 5px solid black;
   box-shadow: 5px 10px 5px black;
 }
+
 .signup-container {
   height: 75vh;
   padding: 50px;
 }
+
 .signup-form {
   display: grid;
   grid-template-columns: 35%;
