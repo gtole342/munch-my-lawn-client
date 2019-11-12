@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client'
 import axios from 'axios'
-import SERVER from '../constants'
-import {LOCAL_HOST} from '../constants'
+import {LOCAL_HOST, SERVER} from '../constants'
 
 class Chat extends Component {
     constructor(props) {
