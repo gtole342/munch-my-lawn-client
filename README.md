@@ -1,7 +1,7 @@
 ## Table of contents
 * [About](#about)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Available Scripts](#available-scripts)
 
 ## About
 
@@ -14,6 +14,11 @@ Munch My Lawn is an eco-friendly app designed for people who want to hire goats 
 * Javascript
 * Node-sass
 * Axios
+
+## Overview 
+
+Navigate to the home page
+![home page](./src/images/home.png)
 
 ## Available Scripts
 
