@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About Munch My Lawn
+
+Munch My Lawn is an eco-friendly app designed for people who want to hire goats to munch their lawns. It includes features such as searching for goats in your immediate area, viewing goat profiles and reviews, as well as chatting with goats in case you have any questions for them! 
+
+## Technologies
+
+React
+Socket.io-client
+Javascript
+Node-sass
+Axios
 
 ## Available Scripts
 
