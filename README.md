@@ -1,6 +1,7 @@
 ## Table of contents
 * [Overview](#overview)
 * [Technologies](#technologies)
+* [Current Development](#current-development)
 * [Available Scripts](#available-scripts)
 
 ## Overview
@@ -16,6 +17,12 @@ Munch My Lawn is an eco-friendly app designed for people who want to hire goats 
 * Javascript
 * Node-sass
 * Axios
+* Twilio
+
+
+## Current Development 
+
+Currently the Twilio feature of MML and react-dates are being refactored. The messenger portion of the app is being styled. 
 
 ## Available Scripts
 
