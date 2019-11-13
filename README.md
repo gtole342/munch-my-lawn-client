@@ -4,11 +4,11 @@ Munch My Lawn is an eco-friendly app designed for people who want to hire goats 
 
 ## Technologies
 
-React
-Socket.io-client
-Javascript
-Node-sass
-Axios
+* React
+* Socket.io-client
+* Javascript
+* Node-sass
+* Axios
 
 ## Available Scripts
 
