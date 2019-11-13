@@ -18,7 +18,12 @@ Munch My Lawn is an eco-friendly app designed for people who want to hire goats 
 ## Overview 
 
 Navigate to the home page
+
 ![home page](./src/images/home.png)
+
+Navigate to the Browse page
+
+![browse page](./src/images/browse.png)
 
 ## Available Scripts
 
