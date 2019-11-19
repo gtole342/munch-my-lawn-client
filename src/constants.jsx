@@ -1,5 +1,5 @@
-//export const SERVER = 'https://peaceful-escarpment-58515.herokuapp.com';
-export const SERVER = 'https://mmlserver.herokuapp.com';
+export const SERVER = 'https://peaceful-escarpment-58515.herokuapp.com';
+//export const SERVER = 'https://mmlserver.herokuapp.com';
 export const LOCALHOST = 'http://localhost:3001';
 export const SIGNUP = SERVER + '/auth/signup';
 export const LOGIN = SERVER + '/auth/login';
