@@ -402,6 +402,22 @@ a:active {
   border-radius: 0px;
 }
 
+@media only screen and (max-width: 900px){
+  .goat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  
+  }
+
+  .goat-card:hover {
+    opacity: 0.7;
+    width: 82%;
+    transition-duration: .1s;
+  }
+}
+
 @media only screen and (max-width: 650px){
   .view-goat {
     border: 1px solid black;
