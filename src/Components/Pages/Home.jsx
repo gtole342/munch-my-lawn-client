@@ -9,8 +9,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.setPingState(this.state.ping);
-    this.pingMyServer(this.state.ping);
+    
   }
 
   setPingState = (pingState) => {
