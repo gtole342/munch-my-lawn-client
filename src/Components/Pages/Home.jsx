@@ -34,7 +34,7 @@ class Home extends Component {
     if(pingState === true) {
       pingInterval();
     } else {
-      clearInterval(pingInterval())
+      clearInterval(pingInterval)
     }
   }
 
