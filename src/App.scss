@@ -266,6 +266,9 @@ ul {
   display: flex;
   margin: 30px;
   padding: 40px;
+  height: 50vh;
+  border: 1px solid black;
+  background-color: rgba(165, 165, 165, 0.637);
   justify-content: space-evenly;
 }
 
@@ -273,6 +276,11 @@ ul {
   padding: 0px 20px;
 }
 
+.review-container {
+  height: 20vh;
+  position: relative;
+  display: flex;
+}
 .browse-display {
   background-color: #f0f1f4;
   height: 110vh;
@@ -396,11 +404,15 @@ a:active {
 
 @media only screen and (max-width: 650px){
   .view-goat {
-    display: block;
     border: 1px solid black;
+    display: block;
+    position: absolute;
   }
   .goat-image-container {
     padding: 10px;
+  }
+  #want-to-chat {
+    margin: 0px;
   }
   .header-container {
     top: 20%;

@@ -105,7 +105,9 @@ class Goat extends Component {
             </Link>
           </div>
         </div>
-        <Reviews user={this.state.user} goat={this.props.location.state.goat}/>
+        <div className = "review-container">
+          <Reviews user={this.state.user} goat={this.props.location.state.goat}/>
+        </div>
       </div>
 
     );
