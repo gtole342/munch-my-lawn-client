@@ -5,11 +5,6 @@ class Home extends Component {
   
   state = {
     redirect: false, 
-    ping: false
-  }
-
-  componentDidMount() {
-    
   }
 
   setPingState = (pingState) => {
