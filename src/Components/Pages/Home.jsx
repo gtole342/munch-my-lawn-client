@@ -4,7 +4,38 @@ import { Redirect } from 'react-router-dom'
 class Home extends Component {
   
   state = {
-    redirect: false
+    redirect: false, 
+    ping: false
+  }
+
+  componentDidMount() {
+    this.setPingState(this.state.ping);
+    this.pingMyServer(this.state.ping);
+  }
+
+  setPingState = (pingState) => {
+    if(pingState === false) {
+      this.setState({
+        ping: true
+      })
+    }
+    else {
+      this.setState({
+        ping: false
+      })
+    }
+  }
+
+  pingMyServer = (pingState) => {
+    let http = require('http');
+    let pingInterval = setInterval(() => {
+      http.get('https://mmlserver.herokuapp.com/')
+    }, 900000);
+    if(pingState === true) {
+      pingInterval();
+    } else {
+      clearInterval(pingInterval())
+    }
   }
 
   handleSubmit = () => {
