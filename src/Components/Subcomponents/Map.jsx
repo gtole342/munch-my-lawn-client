@@ -22,7 +22,7 @@ class Map extends Component {
 
   render(){
     const markers = this.props.goats.map((goat, i)=>{
-
+      if(goat.address) {
       let lng = parseFloat(goat.address.longitude)
       let lat = parseFloat(goat.address.latitude)
       return (
@@ -31,6 +31,7 @@ class Map extends Component {
               <img src="https://imgur.com/llq4pzC.jpg" alt="goat" />
             </Marker> 
         </div>)
+      }
 })
     return(
       <MapGl 
