@@ -89,8 +89,8 @@ ul {
   border: 1px solid white;
   border-radius: 1px;
   max-width: 35vw;
-  
 }
+
 .message-display {
   background-color: rgba(255, 255, 255, 0.95);
   overflow: scroll;
@@ -169,7 +169,7 @@ ul {
   top: 0;
   height: auto;
   width: 100%;
-  filter: brightness(1.07)
+  filter: brightness(1.05)
 }
 
 .bg-video {
@@ -266,6 +266,9 @@ ul {
   display: flex;
   margin: 30px;
   padding: 40px;
+  height: 50vh;
+  border: 1px solid black;
+  background-color: rgba(165, 165, 165, 0.637);
   justify-content: space-evenly;
 }
 
@@ -273,13 +276,17 @@ ul {
   padding: 0px 20px;
 }
 
+.review-container {
+  height: 20vh;
+  position: relative;
+  display: flex;
+}
 .browse-display {
   background-color: #f0f1f4;
   height: 110vh;
   width: 100%;
   display: grid;
   grid-template-columns: 25% auto;
-
 }
 
 .map-container {
@@ -289,10 +296,12 @@ ul {
   border: 5px solid black;
   box-shadow: 5px 10px 5px black;
 }
+
 .signup-container {
   height: 75vh;
   padding: 50px;
 }
+
 .signup-form {
   display: grid;
   grid-template-columns: 35%;
@@ -393,13 +402,33 @@ a:active {
   border-radius: 0px;
 }
 
+@media only screen and (max-width: 900px){
+  .goat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  
+  }
+
+  .goat-card:hover {
+    opacity: 0.7;
+    width: 82%;
+    transition-duration: .1s;
+  }
+}
+
 @media only screen and (max-width: 650px){
   .view-goat {
-    display: block;
     border: 1px solid black;
+    display: block;
+    position: absolute;
   }
   .goat-image-container {
     padding: 10px;
+  }
+  #want-to-chat {
+    margin: 0px;
   }
   .header-container {
     top: 20%;

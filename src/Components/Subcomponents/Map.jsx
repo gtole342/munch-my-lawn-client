@@ -14,11 +14,15 @@ class Map extends Component {
     }
   }
 
+  componentDidMount(){
+    console.log(this.props.goats)
+  }
+
   onViewportChange = viewport => this.setState({viewport, transitionDuration: 300})
 
   render(){
     const markers = this.props.goats.map((goat, i)=>{
-
+      if(goat.address) {
       let lng = parseFloat(goat.address.longitude)
       let lat = parseFloat(goat.address.latitude)
       return (
@@ -27,6 +31,7 @@ class Map extends Component {
               <img src="https://imgur.com/llq4pzC.jpg" alt="goat" />
             </Marker> 
         </div>)
+      }
 })
     return(
       <MapGl 

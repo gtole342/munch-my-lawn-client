@@ -27,16 +27,27 @@ class Browse extends Component {
   render() {
     console.log(this.props.user)
     const goatDisplays = this.state.goats.map((goat) => {
-    return(
-      
-      <Link to={
-        { pathname:`/goat/${goat._id}`,
-          state: {goat: goat,
-                  user: this.props.user}
-        }
-        }>
-        <GoatDisplay goat={goat} key={goat._id} />
-      </Link>)
+      if(this.props.user){
+        
+        return(
+          
+          <Link to={
+            { pathname:`/goat/${goat._id}`,
+              state: {goat: goat,
+                      user: this.props.user}
+            }
+            }>
+            <GoatDisplay goat={goat} key={goat._id} />
+          </Link>)
+
+      } else {
+        return (
+          <div>
+            <h3>Must be logged in to view</h3>
+            <GoatDisplay goat={goat} key={goat._id} />
+          </div>
+        )
+      }
   })
     return (
       <div className="browse-display">

@@ -24,12 +24,10 @@ class ChatList extends Component {
     }
     render() {
         const ids = this.state.chats.map((chat) => {
-            return (
-                chat.firstname
-            )
+            return [chat.firstname, chat.id]
         })
 
-        const uniqueIds = [...new Set(ids)]
+        const uniqueIds = [...new Set(ids[0])]
         
         const nameList = uniqueIds.map((id, idx) => {
             if (uniqueIds) {
