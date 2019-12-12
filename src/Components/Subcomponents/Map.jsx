@@ -14,6 +14,10 @@ class Map extends Component {
     }
   }
 
+  componentDidMount(){
+    console.log(this.props.goats)
+  }
+
   onViewportChange = viewport => this.setState({viewport, transitionDuration: 300})
 
   render(){
